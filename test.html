@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            border-radius: 1rem;
+            background-color: rgb(0, 8, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 300px;
+            height: 400px;
+            color: white;
+            overflow: hidden;
+            flex-direction: column;
+            padding: 70px;
+            box-shadow: 0 0 20px;
+            isolation: isolate;
+            margin-left: 720px;
+            margin-top: 180px;
+        }
+        .container::before,
+        .container::after{
+            content: '';
+            position: absolute;
+ }
+ .container:hover::after{
+    background: hsl(115, 61%, 50%)
+ }
+ .container::after{
+    inset: 4px;
+    background: #83076e;
+    border-radius: calc(1rem - 4px);
+    transition: 0.3s all linear;
+    z-index: -1;
+ }
+ .container::before{
+    height: 200%;
+    width: 200%;
+    background-image: conic-gradient(rgb(96, 52, 219) 0deg,transparent 60deg,transparent 180deg,rgb(18, 214, 18) 180deg,transparent 240deg);
+    inset: -50%;
+    z-index: -2;
+    animation: border-animation 3s infinite ;
+}
+ @keyframes border-animation{
+    to {
+        transform: rotate(-360deg);
+    }
+ }
+ .container:hover::before{
+    animation-play-state: paused;
+ }
+    </style>
+</head>
+<body>
+  <div class="container"> <div class="title">web development</div>
+   <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos dicta architecto delectus qui voluptatibus. Veniam soluta nobis facere rem.</div></div>
+</body>
+</html>

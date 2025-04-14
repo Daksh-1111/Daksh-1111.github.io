@@ -1,0 +1,778 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  /* basic for all */
+  html{
+    scroll-behavior: smooth;
+  }
+  body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+    margin: 0;
+    background: #000; /* Just for better visibility */
+    overflow-x: hidden;
+    background-image: url('/assets/back-img.jpg'); /* Random Image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed */
+    background-repeat: no-repeat;
+    padding-top: 90px;
+    }
+.hr-line {
+    width: 80%; /* Adjust width as needed */
+    margin: 40px auto; /* Centers the line with top-bottom spacing */
+    border: none; /* Removes default border */
+    border-top: 3px solid rgba(151, 20, 226, 0.466); /* Light color */
+}
+/* basic for all */
+/* Navbar Styling */
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    max-height: 90px;
+    background-color: #370a7283;
+    height: 140px;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.1);
+    z-index: 999;
+}
+
+.NavList {
+    display: flex;
+    justify-content: space-between;
+    color: aquamarine;
+    gap: 80px;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    font-size: larger;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Geologica", sans-serif;
+}
+
+a:hover {
+    color: rgb(191, 75, 245);
+}
+
+.name {
+    font-family: "Geologica", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.4s ease-in-out;
+}
+
+.name:hover {
+    text-underline-offset: 4px;
+    text-decoration-color: #400a86;
+    color: #400a86;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        height: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .NavList {
+        gap: 40px;
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .NavList {
+        display: none; /* hide by default */
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        background-color: #370a7283;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 998;
+    }
+
+    .NavList.active {
+        display: flex; /* show when active */
+    }
+
+    .name {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 5px;
+    }
+
+    .NavList {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Animate Hamburger into X */
+.hamburger.active .top {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .middle {
+    opacity: 0;
+}
+
+.hamburger.active .bottom {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+   /* home section editing */
+    #home {
+        background-image: url('assets/kelly-sikkema-tk9RQCq5eQo-unsplash.jpg'); /* Ensure correct path */
+        background-size: cover; /* Ensures the image covers the section without stretching */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repetition */
+        height: 100vh; /* Adjusts the section height to fit the viewport */
+        z-index: -1;
+        display: flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        width: 80%;
+        margin-left: 200px;
+        margin-top: 100px;
+        margin-bottom: 250px;
+        border-radius: 25% 10%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.1);
+    
+    }
+ 
+    
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    
+    }
+    .profile-wrapper{
+        width: 260px; /* Slightly larger than the image */
+        height: 260px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #00eaff, #ff00ff, #ffcc00); /* Gradient border */
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        padding: 1px; /* Thin border */
+       
+        animation: rotateBorder 3s linear infinite; /* Rotating animation */
+        position: absolute;
+        left: 30%; /* Adjust left positioning */
+        top: 50%;
+        transform: translate(-50%, -50%); /* Centers it relative to new position */
+    }
+    .static-text {
+        font-size: 32px;
+        font-weight: 600;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    
+    .animated-text {
+        font-size: 32px;
+        font-weight: 600;
+        color: #00eaff;
+        white-space: nowrap;
+        border-right: 2px solid #00eaff;
+        display: inline-block;
+        min-width: 180px;
+        padding-left: 8px;
+        animation: blinkCursor 0.8s steps(1) infinite;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        text-shadow: 0 0 8px rgba(0, 234, 255, 0.5);
+    }
+    
+    
+    .text-box {
+        position: absolute;
+        left: 60%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        padding: 25px 30px;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 234, 255, 0.3);
+        transition: all 0.3s ease;
+        animation: floatIn 2s ease-out forwards;
+    }
+    @keyframes floatIn {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -60%) scale(0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+        
+
+    
+    @keyframes blinkCursor {
+        0%, 100% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #00eaff;
+        }
+    }
+    
+.profile-wrapper,
+.text-box {
+    opacity: 0;
+    animation: fadeIn 1.8s ease-in-out forwards;
+}
+
+.text-box {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add a glowing effect behind the profile pic */
+.profile-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,234,255,0.2), transparent 70%);
+    z-index: -1;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+/* Add glow on hover to profile pic */
+.profile-pic:hover {
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add smooth hover effect to text */
+.static-text,
+.animated-text {
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-box:hover .static-text,
+.text-box:hover .animated-text {
+    transform: scale(1.05);
+}
+
+/* Cursor spacing fix (optional) */
+.cursor {
+    margin-left: 5px;
+}
+
+      /* home section editing */
+ /* about section editing */
+      #about {
+            display: flex;
+            margin-top: 50px;
+            text-align: center;
+            height: 800px;
+        background-color:transparent;
+        box-shadow: #121212;
+        
+            }
+        
+    .aboutsection {
+            display: flex;
+            flex-direction: column;
+             width: 100%; /* Ensures it takes full width */
+        }
+        .text-AboutMe {
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            flex-direction: column;  /* Ensures vertical stacking */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 1400px; /* Fixed width */
+            max-width: 100%; /* Ensures responsiveness */
+            height: auto; /* Adjusts height based on content */
+            margin: 0 auto; /* Centers horizontally */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #0e041b;
+            border: 2px solid #400a86;
+            background: #121212;
+            color: rgb(241, 231, 231);
+        }
+        .aboutHead > h1{
+            color: #ca12c1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 100px;
+            font-size: 100px !important;
+              margin: 0 auto; /* Centers horizontally */
+            font-weight: bolder;
+            padding:10px; /* Adjust padding as needed */
+            background-color: #e1dfe400;
+            margin-top: 100px;
+            margin-bottom: 100px;
+             border-radius: 50% 10%;
+          text-align: center;
+            font-size: 14px; /* Adjust as needed */
+            white-space:nowrap;
+        }
+        /* Default styles are applied for larger screens */
+
+/* Tablet View (Below 1024px) */
+@media screen and (max-width: 1024px) {
+    #about {
+        height: auto; /* Adjust height dynamically */
+    }
+    .text-AboutMe {
+        width: 90%; /* Adjust width for responsiveness */
+        padding: 15px;
+    }
+    .aboutHead > h1 {
+        font-size: 80px !important;
+        width: 120px;
+        height: 80px;
+    }
+}
+
+/* Mobile View (Below 768px) */
+@media screen and (max-width: 768px) {
+    .aboutsection {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-AboutMe {
+        width: 95%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .aboutHead > h1 {
+        font-size: 60px !important;
+        width: 100px;
+        height: 70px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Small Mobile View (Below 480px) */
+@media screen and (max-width: 480px) {
+    .text-AboutMe {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .aboutHead > h1 {
+        font-size: 50px !important;
+        width: 80px;
+        height: 60px;
+    }
+}
+        /* about section editing */
+          /* skill section editing */
+        #skills{
+          
+           color: #00eaff;
+           background-color:transparent;
+        }
+        .skillsHead > h1{
+            color: #ca12c1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 100px;
+            font-size: 100px !important;
+              margin: 0 auto; /* Centers horizontally */
+            font-weight: bolder;
+            white-space:nowrap;
+            padding:10px; /* Adjust padding as needed */
+            background-color: #f0ebf7;
+            margin-bottom: 150px;
+             border-radius: 50% 10%;
+          text-align: center;
+            font-size: 14px; /* Adjust as needed */
+            padding-top: 100px;
+
+        }
+        
+      
+        .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Increased width */
+        gap: 40px 30px; /* Increased row gap */
+        justify-content: center;
+        max-width: 1400px; /* Adjust width */
+        margin: auto;
+    }
+    
+    /* Skill Box */
+    .skill {
+        background: white;
+        padding: 50px; /* Increased padding for bigger size */
+        border-radius: 25px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    /* Hover Effect */
+    .skill:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Image Styling */
+    .skill img {
+        width: 90px; /* Increased size */
+        height: 90px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+    
+    /* Text Styling */
+    .skill span {
+        font-size: 22px;
+        font-weight: bold;
+        color: #444;
+    }
+    
+    /* Random Background Colors */
+    .skill:nth-child(odd) {
+        background-color: #ffeaa7;
+    }
+    
+    .skill:nth-child(even) {
+        background-color: #a29bfe;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .skills-container {
+            grid-template-columns: repeat(3, 1fr); /* 3 rows on medium screens */
+            gap: 50px 30px; /* More row gap */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .skills-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 rows on small screens */
+        }
+    
+        .skill {
+            padding: 40px;
+        }
+    
+        .skill img {
+            width: 75px;
+            height: 75px;
+        }
+    
+        .skill span {
+            font-size: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .skills-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on extra small screens */
+        }
+        
+        .skill {
+            padding: 30px;
+        }
+        
+        .skill img {
+            width: 65px;
+            height: 65px;
+        }
+        
+        .skill span {
+            font-size: 18px;
+        }
+    }
+    /* skill section editing */
+      /* resume button editing  */
+    .glow-resume {
+        padding: 8px 15px;
+        font-weight: bold;
+        color: white;
+        border: 2px solid #ff5733;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+        position: relative;
+    }
+
+  
+    .glow-resume::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 15px #ff5733;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    
+    .glow-resume:hover::before {
+        opacity: 1;
+    }
+    .resume-3d {
+        padding: 10px 20px;
+        font-weight: bold;
+        background: #ff5733;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+        box-shadow: 0px 5px 0px #c4421a;
+    }
+    
+    .resume-3d:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 7px 0px #c4421a;
+    }    
+    /* resume button editing */
+    /* socials section editing  */
+    .socials-section {
+        background-color: #111;
+        color: white;
+        font-family: 'Geologica', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+      
+      .socials-section h2 {
+        font-size: 4rem;
+        color: #d3d3d3;
+        margin-bottom: 40px;
+      }
+      
+      .social-icons {
+        background-color: #1d1d1d;
+        padding: 40px 60px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 1100px;
+      }
+      
+      .social-icons img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: white;
+        padding: 10px;
+      }
+      
+      .social-icons img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      }
+      
+      .x-logo {
+        background-color: white;
+        padding: 12px;
+        border-radius: 50%;
+      }
+      
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background-color: #1d1d1d;
+        padding: 30px 40px;
+        border-radius: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+      }
+      
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: #fff;
+        font-size: 28px;
+      }
+      
+      .contact-item img {
+        width: 36px;
+        height: 36px;
+      }
+      
+      .social-footer {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        font-size: 22px;
+        color: #bbb;
+        width: 100%;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .socials-section h2 {
+          font-size: 2.6rem;
+        }
+      
+        .social-icons img {
+          width: 100px;
+          height: 100px;
+        }
+      
+        .contact-item {
+          font-size: 20px;
+        }
+      
+        .social-footer {
+          font-size: 18px;
+        }
+      }
+      .social-icons img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%; /* Fully circular */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: white; /* for logos with transparent bg like X */
+        padding: 10px;
+      }
+      
+      .social-icons img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+      }
+      
+      /* Specific fix for X logo still applies */
+      .x-logo {
+        background-color: white;
+        padding: 14px;
+        border-radius: 50%;
+      }
+            
+      

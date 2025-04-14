@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Navbar</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+    <nav>
+        <div class="navbar">
+            <span class="name">Daksh Sondhi</span>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </button>
+            <ul class="NavList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/19sYsoEuzpwOKbb2L4AtwsRwpTyxbmv6K/view?usp=sharing" target="_blank" class="resume-3d" download>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script>
+    function toggleMenu() {
+        const navList = document.querySelector('.NavList');
+        const hamburger = document.querySelector('.hamburger');
+        navList.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+    </script>
+    
+    </body>
+    </html>
+    
+<section id="home">
+    <div class="profile-wrapper">
+      <img src="assets/developer.jpg" class="profile-pic" alt="Profile">
+
+  </div>
+  <div class="text-box">
+    <h2>
+      <span class="static-text">I am a </span>
+      <span class="animated-text" id="type-text"></span>
+    </h2>
+</div>
+   </section>
+   <hr class="hr-line">
+   <section id="about">
+    <div class="aboutsection">
+      <div class="aboutHead"><h1>About Me</h1></div><br>
+      <div class="text-AboutMe">
+        
+        <p>I am a 19-year-old enthusiast deeply passionate about technology, currently pursuing my 3rd year of BCA at <span style="font-weight: bolder;">Maharishi Markandeshwar[Deemed to be University]</span>.  <br><br>
+
+            With a curious mindset and a drive to constantly learn, I thrive on exploring new ideas, building meaningful digital products, and challenging myself to grow both technically and personally. <br><br>
+            
+            When I'm not glued to my screen, you'll find me at the gym, lifting weights and pushing my fitness limits. Technology and fitness are my worlds, and I'm always ready for the next challenge.</p><br>
+        
+    </div>
+    </div>
+   </section>
+<hr class="hr-line">
+   <section id="skills">
+    <div class="skillsHead"><h1>My Skills</h1></div>
+    <div class="skills-container">
+      <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+        <span>HTML</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+        <span>CSS</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+        <span>JavaScript</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+        <span>Python</span>
+    </div>
+    <div class="skill">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/2203px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" alt="Excel">
+      <span>Excel</span>
+  </div>
+  <div class="skill">
+      <img src="https://logos-world.net/wp-content/uploads/2022/02/Power-BI-Logo.png" alt="Power BI">
+      <span>Power BI</span>
+  </div>
+  
+  
+  
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js">
+        <span>React.js</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git">
+        <span>Git</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        <span>GitHub</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Oracle_SQL_Developer_logo.svg" alt="SQL">
+        <span>SQL</span>
+    </div>
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+        <span>Java</span>
+    </div>
+   
+    <div class="skill">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+        <span>C++</span>
+    </div>
+    </div>
+   </section>
+   <hr class="hr-line">
+   <section id="projects">
+   <div class="contactHead"></div>
+   </section>
+   <section class="socials-section">
+    <h2 data-aos="fade-down">Socials</h2>
+  
+    <div class="social-icons" data-aos="zoom-in">
+      <a href="https://www.linkedin.com/in/daksh-sondhi-953608184?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/DakshSondh37487?t=TqFELl1juaIuzywMC7AyDg&s=09" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png" alt="X Logo" class="x-logo">
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+      <a href="https://github.com/Dak" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      </a>
+    </div>
+    
+      
+  
+    <div class="contact-info">
+      <a class="contact-item" href="tel:+919896274308" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" />
+        +91 9896274308
+      </a>
+      <a class="contact-item" href="mailto:sondhidaksh@gmail.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+        sondhidaksh@gmail.com
+      </a>
+    </div>
+    
+  
+    <div class="social-footer">&copy; 2025 dakshsondhi.com</div>
+  </section>
+  
+  
+   <footer>
+
+   </footer>
+   <script>
+    function toggleMenu() {
+        document.querySelector(".NavList").classList.toggle("active");
+    }
+</script>
+
+<!-- AOS for scroll animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  const roles = ["Web Developer", "Tech Enthusiast", "Freelancer"];
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 100;
+  const erasingSpeed = 50;
+  const delayBetweenRoles = 1500;
+
+  const textElement = document.getElementById("type-text");
+
+  function type() {
+    const currentRole = roles[index];
+    if (isDeleting) {
+      textElement.textContent = currentRole.substring(0, charIndex--);
+      if (charIndex < 0) {
+        isDeleting = false;
+        index = (index + 1) % roles.length;
+        setTimeout(type, 300);
+      } else {
+        setTimeout(type, erasingSpeed);
+      }
+    } else {
+      textElement.textContent = currentRole.substring(0, charIndex++);
+      if (charIndex > currentRole.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenRoles);
+      } else {
+        setTimeout(type, typingSpeed);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
+</script>
+
+
+
+</body>
+</html>
