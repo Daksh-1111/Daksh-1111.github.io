@@ -21,6 +21,12 @@
     background-attachment: fixed; /* Keeps the background fixed */
     background-repeat: no-repeat;
     padding-top: 90px;
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+    
+      
+      
     }
 .hr-line {
     width: 80%; /* Adjust width as needed */
@@ -646,7 +652,7 @@ a:hover {
     }    
     /* resume button editing */
     /* socials section editing  */
-    .socials-section {
+    #socials-section {
         background-color: #111;
         color: white;
         font-family: 'Geologica', sans-serif;
@@ -662,7 +668,7 @@ a:hover {
         width: 100%;
       }
       
-      .socials-section h2 {
+      #socials-section h2 {
         font-size: 4rem;
         color: #d3d3d3;
         margin-bottom: 40px;
@@ -736,7 +742,7 @@ a:hover {
       }
       
       @media screen and (max-width: 768px) {
-        .socials-section h2 {
+        #socials-section h2 {
           font-size: 2.6rem;
         }
       
